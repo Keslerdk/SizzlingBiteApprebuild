@@ -7,7 +7,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,6 +21,8 @@ import com.example.sizzlingbiteapprebuild.R;
 import com.example.sizzlingbiteapprebuild.introduction.boardingScreen.OnBoardingScreenFragment1;
 import com.example.sizzlingbiteapprebuild.introduction.boardingScreen.OnBoardingScreenFragment2;
 import com.example.sizzlingbiteapprebuild.introduction.boardingScreen.OnBoardingScreenFragment3;
+import com.example.sizzlingbiteapprebuild.login.LoginActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class IntroductoryActivity extends AppCompatActivity {
 
@@ -27,6 +32,9 @@ public class IntroductoryActivity extends AppCompatActivity {
     LiquidPager liquidPager;
     private static final int NUM_PAGE = 3;
     ScreenSliderPagerAdapter pagerAdapter;
+
+    private static final int SPLASH_TIME_OUT = 4998;
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +55,24 @@ public class IntroductoryActivity extends AppCompatActivity {
         liquidPager = findViewById(R.id.liquid_pager);
         pagerAdapter = new ScreenSliderPagerAdapter(getSupportFragmentManager());
         liquidPager.setAdapter(pagerAdapter);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                sharedPref = getSharedPreferences("SharedPref", MODE_PRIVATE);
+                boolean isFirstTime = sharedPref.getBoolean("isFirstTime", true);
+
+                if (isFirstTime) {
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putBoolean("isFirstTime", false);
+                    editor.commit();
+                } else {
+                    Intent intent = new Intent(IntroductoryActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        }, SPLASH_TIME_OUT);
     }
 
     private class ScreenSliderPagerAdapter extends FragmentStatePagerAdapter {
