@@ -13,7 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.example.sizzlingbiteapprebuild.slidingNav.fragments.AboutUsFragment;
-import com.example.sizzlingbiteapprebuild.slidingNav.fragments.DashBoardFragment;
+import com.example.sizzlingbiteapprebuild.slidingNav.fragments.dashboard.DashBoardFragment;
 import com.example.sizzlingbiteapprebuild.slidingNav.fragments.MyProfileFragment;
 import com.example.sizzlingbiteapprebuild.slidingNav.fragments.NearbyResFragment;
 import com.example.sizzlingbiteapprebuild.slidingNav.fragments.SettingsFragment;
