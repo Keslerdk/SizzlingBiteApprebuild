@@ -11,7 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.sizzlingbiteapprebuild.ApplicationMain;
 import com.example.sizzlingbiteapprebuild.R;
+import com.example.sizzlingbiteapprebuild.order.UpdateSelectedItems;
 
 import java.util.ArrayList;
 
@@ -24,9 +26,13 @@ public class ResRv2Adapter extends RecyclerView.Adapter<ResRv2Adapter.ResRv2View
     String name;
     int price;
 
-    public ResRv2Adapter(ArrayList<ResRv2Model> items, Context context) {
+    UpdateSelectedItems updateSelectedItems;
+
+    public ResRv2Adapter(ArrayList<ResRv2Model> items, Context context,
+                         UpdateSelectedItems updateSelectedItems) {
         this.items = items;
         this.context = context;
+        this.updateSelectedItems = updateSelectedItems;
     }
 
     @NonNull
@@ -42,18 +48,18 @@ public class ResRv2Adapter extends RecyclerView.Adapter<ResRv2Adapter.ResRv2View
         ResRv2Model current = items.get(position);
         holder.text.setText(current.getName());
 
-//        holder.addItem.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                name = current.getName();
-//                price = 200;
-//
-//                ((UpdateSelectedItems) ApplicationMain.getMyContext()).addItems(name, price);
-//
-//                holder.addItem.setVisibility(View.INVISIBLE);
-//                holder.done.setVisibility(View.VISIBLE);
-//            }
-//        });
+        holder.addItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                name = current.getName();
+                price = 200;
+
+                ((UpdateSelectedItems) ApplicationMain.getMyContext()).addItems(name, price);
+
+                holder.addItem.setVisibility(View.INVISIBLE);
+                holder.done.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     @Override

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.sizzlingbiteapprebuild.R;
+import com.example.sizzlingbiteapprebuild.order.ConfirmOrderActivity;
+import com.example.sizzlingbiteapprebuild.order.UpdateSelectedItems;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,8 @@ public class ResDetailsActivity extends AppCompatActivity implements UpdateRecyc
     ArrayList<ResRv2Model> items2;
 
     int pos;
+
+    UpdateSelectedItems updateSelectedItems;
 
 
     @Override
@@ -60,6 +64,15 @@ public class ResDetailsActivity extends AppCompatActivity implements UpdateRecyc
                 false));
         rv1.setAdapter(resRv1Adapter);
 
+        ImageView cart = findViewById(R.id.cart);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResDetailsActivity.this, ConfirmOrderActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         items2 = new ArrayList<>();
     }
@@ -67,7 +80,7 @@ public class ResDetailsActivity extends AppCompatActivity implements UpdateRecyc
 
     @Override
     public void callback(int position, ArrayList<ResRv2Model> items) {
-        resRv2Adapter = new ResRv2Adapter(items, this);
+        resRv2Adapter = new ResRv2Adapter(items, this, updateSelectedItems);
         rv2.setNestedScrollingEnabled(true);
         rv2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
                 false));
