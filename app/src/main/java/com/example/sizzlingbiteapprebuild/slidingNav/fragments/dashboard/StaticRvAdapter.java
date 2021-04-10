@@ -64,54 +64,54 @@ public class StaticRvAdapter extends RecyclerView.Adapter<StaticRvAdapter.Static
                     updateRecyclerView.callback(position, items);
                 } else if (position == 1) {
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Pizza 1", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 2", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 3", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 4", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 5", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 6", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 8", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 9", R.drawable.ic_pizza_dynamic, 0));
-                    items.add(new DynamicRvModel("Pizza 10", R.drawable.ic_pizza_dynamic, 0));
+                    items.add(new DynamicRvModel("Pizza 1", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 2", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 3", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 4", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 5", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 6", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 8", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 9", R.drawable.ic_pizza_dynamic, 1));
+                    items.add(new DynamicRvModel("Pizza 10", R.drawable.ic_pizza_dynamic, 1));
 
                     updateRecyclerView.callback(position, items);
                 } else if (position == 2) {
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Fries 1", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 2", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 3", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 4", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 5", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 6", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 8", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 9", R.drawable.ic_french_fries_dynamic, 0));
-                    items.add(new DynamicRvModel("Fries 10", R.drawable.ic_french_fries_dynamic, 0));
+                    items.add(new DynamicRvModel("Fries 1", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 2", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 3", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 4", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 5", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 6", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 8", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 9", R.drawable.ic_french_fries_dynamic, 2));
+                    items.add(new DynamicRvModel("Fries 10", R.drawable.ic_french_fries_dynamic, 2));
 
                     updateRecyclerView.callback(position, items);
                 } else if (position == 3) {
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Sandwich 1", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 2", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 3", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 4", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 5", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 6", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 8", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 9", R.drawable.ic_sandwich_dynamic, 0));
-                    items.add(new DynamicRvModel("Sandwich 10", R.drawable.ic_sandwich_dynamic, 0));
+                    items.add(new DynamicRvModel("Sandwich 1", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 2", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 3", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 4", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 5", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 6", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 8", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 9", R.drawable.ic_sandwich_dynamic, 3));
+                    items.add(new DynamicRvModel("Sandwich 10", R.drawable.ic_sandwich_dynamic, 3));
 
                     updateRecyclerView.callback(position, items);
                 } else if (position == 4) {
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Ice-Cream 1", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 2", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 3", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 4", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 5", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 6", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 8", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 9", R.drawable.ic_ice_cream_dynamic, 0));
-                    items.add(new DynamicRvModel("Ice-Cream 10", R.drawable.ic_ice_cream_dynamic, 0));
+                    items.add(new DynamicRvModel("Ice-Cream 1", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 2", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 3", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 4", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 5", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 6", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 8", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 9", R.drawable.ic_ice_cream_dynamic, 4));
+                    items.add(new DynamicRvModel("Ice-Cream 10", R.drawable.ic_ice_cream_dynamic, 4));
 
                     updateRecyclerView.callback(position, items);
                 }

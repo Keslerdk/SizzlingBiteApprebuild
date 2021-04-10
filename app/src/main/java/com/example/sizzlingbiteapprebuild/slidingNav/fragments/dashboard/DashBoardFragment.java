@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sizzlingbiteapprebuild.R;
+import com.example.sizzlingbiteapprebuild.resdetails.ResDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -72,6 +73,17 @@ public class DashBoardFragment extends Fragment implements UpdateRecyclerView{
                 false));
         dynamicRvAdapter.notifyDataSetChanged();
         rvDynamic.setAdapter(dynamicRvAdapter);
+
+        dynamicRvAdapter.setOnItemClickListener(new DynamicRvAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                int pos = items.get(position).getPos();
+
+                Intent intent = new Intent(getContext(), ResDetailsActivity.class);
+                intent.putExtra("pos", pos);
+                startActivity(intent);
+            }
+        });
 
     }
 }
